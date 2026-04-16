@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 · 优美主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4eaf5 100%);
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 导航栏 */
+        nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            z-index: 999;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d63c9;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2d63c9;
+        }
+
+        /* 主内容 */
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 12rem 2rem 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 1.2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #666;
+            max-width: 650px;
+            margin: 0 auto 2.5rem;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.2rem;
+            background: #2d63c9;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 8px 20px rgba(45, 99, 201, 0.2);
+            transition: all 0.3s ease;
+            animation: fadeIn 1.4s ease-out;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(45, 99, 201, 0.25);
+            background: #2554af;
+        }
+
+        /* 卡片区域 */
+        .cards {
+            max-width: 1100px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #222;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.98rem;
+        }
+
+        /* 动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 底部 */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航 -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Index</div>
+            <div class="nav-links">
+                <a href="#">首页</a>
+                <a href="#">功能</a>
+                <a href="#">关于</a>
+                <a href="#">联系</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <section class="hero">
+        <h1>简洁而优雅的现代首页</h1>
+        <p>干净的界面、柔和的渐变、流畅的动画，适用于个人主页、产品展示或管理系统入口，开箱即用，美观大方。</p>
+        <a href="#" class="btn">开始体验</a>
+    </section>
+
+    <!-- 卡片 -->
+    <section class="cards">
+        <div class="card">
+            <h3>响应式设计</h3>
+            <p>完美适配手机、平板、桌面端，布局自动调整，体验始终如一。</p>
+        </div>
+        <div class="card">
+            <h3>现代美学</h3>
+            <p>采用磨砂玻璃导航、渐变背景、微动效，视觉轻盈高级，不浮夸。</p>
+        </div>
+        <div class="card">
+            <h3>开箱即用</h3>
+            <p>纯 HTML + CSS，无需依赖，复制即可运行，可随意修改文字与颜色。</p>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        © 2026 优美首页 · 简洁而不失质感
+    </footer>
+
+</body>
+</html>
